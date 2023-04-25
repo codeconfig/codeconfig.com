@@ -34,5 +34,5 @@ jobs:
           cloud-url: azblob://pulumistate
         env:
           AZURE_STORAGE_ACCOUNT: stracndrunnerclarity0101
-          AZURE_KEYVAULT_AUTH_VIA_CLI: true
+          AZURE_KEYVAULT_AUTH_VIA_CLI: "true"
           ARM_USE_MSI: true
