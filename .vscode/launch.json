@@ -1,0 +1,20 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+          
+            "request": "launch",
+            "name": "Deploy run",
+           "command": "pulumi up", 
+           "type": "node-terminal",
+           "env": {
+            "AZURE_STORAGE_ACCOUNT": "stractsclarity0101",
+            "AZURE_STORAGE_SAS_TOKEN": "sp=rcwdl&st=2023-04-24T10:35:36Z&se=2024-04-24T18:35:36Z&spr=https&sv=2021-12-02&sr=c&sig=S9inRbjDrP8IJpKRBIR1Aq9%2F3cbCFG6WNbikeM0sHuY%3D",
+            "AZURE_KEYVAULT_AUTH_VIA_CLI": "true",
+          }
+        },
+    ]
+}

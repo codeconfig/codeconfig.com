@@ -1,0 +1,4 @@
+config:
+  azure-native:location: WestUS2
+  azure-native:subscriptionId: NDC-EU-PE-DEV-NDC
+  azure-native:useMSI: "true"

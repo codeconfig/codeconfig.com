@@ -1,0 +1,20 @@
+{
+    "name": "claritypoc",
+    "version": "0.0.1.0",
+    "main": "index.ts",
+    "devDependencies": {
+        "@types/node": "^16.18.24"
+    },
+    "scripts": {
+    "build": "tsc -p tsconfig.json"
+    },
+    "dependencies": {
+        "@actions/core": "^1.10.0",
+        "@actions/github": "^5.1.1",
+        "@pulumi/azure-native": "^1.0.0",
+        "@pulumi/pulumi": "^3.0.0",
+        "js-yaml": "^4.1.0",
+        "tampax": "^1.2.2",
+        "yaml": "^2.2.1"
+    }
+}

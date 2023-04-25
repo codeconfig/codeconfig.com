@@ -1,0 +1,34 @@
+Metadata:
+ product_id : &product_id "newdoc"
+ environment_id: &environment_id "ndcc1"
+ instance_id: "01"
+ schema: !include ClarityResourceSchema.yaml
+variables:
+ newDocRetentionStorage: &newDocRetentionStorage !clStracName ["01"]
+ newDocArchiveStorage: &newDocArchiveStorage !clStracName ["02"]
+ newDocRetentionKeyVault: &newDocRetentionKeyVault !clKVName ["01"]
+ newDocArchiveKeyVault: &newDocArchiveKeyVault !clKVName ["02"]
+ newDocAppServicePlan: &newDocAppServicePlan !clAppSvcName ["01"]
+ newDocWebApp: &newDocWebApp !clWebAppName ["01"]
+Resources:
+ StorageAccount: 
+  - Name: *newDocRetentionStorage
+  - Name: *newDocArchiveStorage
+ KeyVault:
+  - Name: *newDocRetentionKeyVault
+  - Name: *newDocArchiveKeyVault
+    Secrets:
+      -  Name: *newDocArchiveStorage
+         Value: !Ref ["Resources.StorageAccount", *newDocArchiveStorage, "PrimaryKey"]
+ AppServicePlan:
+   - Name: *newDocAppServicePlan
+ WebApp:
+   - Name: *newDocWebApp
+     AppServicePlanId : !Ref ["Resources.AppServicePlan", *newDocAppServicePlan , "Id"]
+ Deploy:
+  WebApp:
+   - package : "NewDay.Digital.OpsCockpit.NewDoc.Webapp"
+     repo : ""
+     version : "1.2.1321"
+     Id : !Ref ["Resources.WebApp", *newDocWebApp , "Id"]
+  

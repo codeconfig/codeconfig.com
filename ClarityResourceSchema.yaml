@@ -1,0 +1,6 @@
+Clarity:
+ product_id : "clarity"
+ StorageAccount: 
+   Prefix: 'strac'
+ KeyVault: 
+   Prefix: 'kv'
