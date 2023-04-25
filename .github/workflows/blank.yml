@@ -18,6 +18,8 @@ jobs:
    
       - name: Installing dependencies 📦️
         run: npm install
+      - name: Install AzCli
+        run: npm install azure-cli
       
       - name: "Login to Azure"
         uses: Azure/login@v1
