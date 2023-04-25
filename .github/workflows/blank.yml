@@ -30,4 +30,4 @@ jobs:
           AZURE_STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
           AZURE_STORAGE_KEY: ${{ secrets.AZURE_STORAGE_KEY }}
           AZURE_KEYVAULT_AUTH_VIA_CLI: true
-          AZURE_KEYVAULT_AUTH_VIA_CLI1: true
+          AZURE_KEYVAULT_AUTH_VIA_CLI2: true
