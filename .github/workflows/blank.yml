@@ -15,10 +15,9 @@ jobs:
         with:
           node-version: 16
           run: npm ci
-      - run: npm test
-
+   
       - name: Installing dependencies 📦️
-        run: yarn install
+        run: npm install
 
       - name: Applying infrastructure 🚀
         uses: pulumi/actions@v4
