@@ -35,3 +35,4 @@ jobs:
         env:
           AZURE_STORAGE_ACCOUNT: stracndrunnerclarity0101
           AZURE_KEYVAULT_AUTH_VIA_CLI: true
+          ARM_USE_OIDC: true
