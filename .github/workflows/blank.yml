@@ -18,6 +18,9 @@ jobs:
    
       - name: Installing dependencies 📦️
         run: npm install
+      
+      - name: "Login to Azure"
+        uses: Azure/login@v1
 
       - name: Applying infrastructure 🚀
         uses: pulumi/actions@v4
@@ -29,4 +32,3 @@ jobs:
           AZURE_STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
           AZURE_STORAGE_KEY: ${{ secrets.AZURE_STORAGE_KEY }}
           AZURE_KEYVAULT_AUTH_VIA_CLI: true
-          AZURE_KEYVAULT_AUTH_VIA_CLI2: true
