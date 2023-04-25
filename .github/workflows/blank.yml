@@ -30,7 +30,7 @@ jobs:
         uses: pulumi/actions@v4
         with:
           command: up
-          stack-name: dev
+          stack-name: cb
           cloud-url: azblob://pulumistate
         env:
           AZURE_STORAGE_ACCOUNT: stracndrunnerclarity0101

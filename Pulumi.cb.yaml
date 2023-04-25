@@ -1,0 +1,4 @@
+config:
+  azure-native:location: EastUS
+  azure-native:subscriptionId: b6c74da0-148b-48ec-a1ed-3d29f241ae20
+  azure-native:useMSI: "true"
