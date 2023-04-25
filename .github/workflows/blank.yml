@@ -20,12 +20,12 @@ jobs:
         run: npm install
       
       - uses: elstudio/action-install-azure-cli@v1
-      
-      - name: "Login to Azure"
-        uses: Azure/login@v1
+          
+      - uses: azure/CLI@v1
         with:
-          subscription-id: 0d321a7d-ad1c-49cd-848d-aadd32ce1ff1
-
+          inlineScript: |
+            az login --identity
+            
       - name: Applying infrastructure 🚀
         uses: pulumi/actions@v4
         with:
