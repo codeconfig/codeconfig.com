@@ -31,8 +31,7 @@ jobs:
         with:
           command: up
           stack-name: dev
-          cloud-url: azblob://my-blob-name-and-path
+          cloud-url: azblob://pulumistate
         env:
-          AZURE_STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
-          AZURE_STORAGE_KEY: ${{ secrets.AZURE_STORAGE_KEY }}
+          AZURE_STORAGE_ACCOUNT: stracndrunnerclarity0101
           AZURE_KEYVAULT_AUTH_VIA_CLI: true
