@@ -18,8 +18,8 @@ jobs:
    
       - name: Installing dependencies 📦️
         run: npm install
-      - name: Install AzCli
-        run: npm install azure-cli
+      
+      - uses: elstudio/action-install-azure-cli@v1
       
       - name: "Login to Azure"
         uses: Azure/login@v1
