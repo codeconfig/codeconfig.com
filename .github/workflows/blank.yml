@@ -26,6 +26,10 @@ jobs:
           inlineScript: |
             az login --identity
             
+      - uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+            
       - name: Applying infrastructure 🚀
         uses: pulumi/actions@v4
         with:
@@ -36,6 +40,3 @@ jobs:
           AZURE_STORAGE_ACCOUNT: stracndrunnerclarity0101
           AZURE_KEYVAULT_AUTH_VIA_CLI: "true"
           ARM_USE_MSI: true
-          ARM_CLIENT_ID: aa42d34f-7866-47e6-83df-a397fa7e8718
-          ARM_CLIENT_SECRET: o7Y8Q~E18g3fgqoLpidfNKUQcqgD01PvZalrbajv
-          ARM_SUBSCRIPTION_ID: 0d321a7d-ad1c-49cd-848d-aadd32ce1ff1
