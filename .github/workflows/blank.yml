@@ -33,7 +33,7 @@ jobs:
       - name: Applying infrastructure 🚀
         uses: pulumi/actions@v4
         with:
-          command: up
+          command: init
           stack-name: cb
           cloud-url: azblob://pulumistate
         env:
