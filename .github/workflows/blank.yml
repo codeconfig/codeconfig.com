@@ -33,8 +33,9 @@ jobs:
       - name: Applying infrastructure 🚀
         uses: pulumi/actions@v4
         with:
-          command: init
+          command: up
           stack-name: cb
+          upsert : true
           cloud-url: azblob://pulumistate
         env:
           AZURE_STORAGE_ACCOUNT: stracndrunnerclarity0101
