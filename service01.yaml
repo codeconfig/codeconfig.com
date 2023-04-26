@@ -1,5 +1,5 @@
 Metadata:
- product_id : &product_id "newdoc"
+ product_id : &product_id "newdocts"
  environment_id: &environment_id "ndcc1"
  instance_id: "01"
  schema: !include ClarityResourceSchema.yaml
