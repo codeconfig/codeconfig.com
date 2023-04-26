@@ -76,7 +76,7 @@ const IncludeYamlType = new yaml.Type('!include', {
 })
 
 productId = "newdoc";
-environmentId = "ndcc1";
+environmentId = "ndcts1";
 instanceId = "01"
 
 const schema = yaml.DEFAULT_SCHEMA.extend([IncludeYamlType, JoinYamlType, RefYamlType, CLStracNameYamlType,CLKVNameYamlType,CLAppSvcNameYamlType,CLWebAppNameYamlType]);
